@@ -2,7 +2,7 @@
 
 ## r/CryptoCurrency Daily Thread Sentiment
 
-The following project is meant to be an introduction into data gathering, cleaning, and modeling with a Keras neural network. In a nutshell, we scrape comments from the r/CryptoCurrency subreddit's daily thread, label this data with Bitcoin's future price action, and attempt to predict future price action based on comment sentiment. This is a learning project, and should not be used in deployement.
+The following project is meant to be an introduction into data gathering, cleaning, and modeling with a Keras neural network. In a nutshell, we scrape comments from the r/CryptoCurrency subreddit's daily thread, label this data with Bitcoin's future price action, and attempt to predict future price action based on comment sentiment. This is a learning project, and should not be used in production.
 
 Our data consists of a 2 dimensional matrix, where the columns store words, and the rows are comments from a specific daily thread. We use several Convolutional Neural Network (CNN) layers to filter out daily threads both horizontally (word-wise) and vertically (comment-wise) - importantly, this filtration is done seperately so as to prevent the spatial association of words in two different comments. With our data, this combination seems to perform better than a Recurrent Neural Network (RNN), Long Short-Term Memory (LSTM), as well as various combinations of [recurrent-type layers](https://keras.io/api/layers/recurrent_layers/).
 
